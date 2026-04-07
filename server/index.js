@@ -2,6 +2,9 @@
 const net = require('node:net');
 const fs = require('node:fs');
 
+const PORT = process.env.PORT || 4040;
+
+
 const server = net.createServer((socket) => {
     console.log('Client connected.');
     socket.setEncoding('utf8');
@@ -20,7 +23,7 @@ const server = net.createServer((socket) => {
     });
 });
 
-server.listen(4040, 'https://mapbattle-tcp-socket.onrender.com/', () => {
-    console.log('TCP server listening on https://mapbattle-tcp-socket.onrender.com/');
+server.listen(PORT, '0.0.0.0', () => {
+    console.log(`TCP server listening on port ${PORT}`);
 });
 
