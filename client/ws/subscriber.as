@@ -39,7 +39,7 @@ namespace Subscriber
             return;
         }
         @g_Socket = Net::Socket();
-        bool started = g_Socket.Connect("127.0.0.1", 4040);
+        bool started = g_Socket.Connect("https://mapbattle-tcp-socket.onrender.com/", 4040);
         if (!started) {
             print("Connection start failed.");
             UI::ShowNotification("Subscribe Failed", "Could not start TCP connection.", 2000);

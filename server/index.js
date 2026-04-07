@@ -20,7 +20,7 @@ const server = net.createServer((socket) => {
     });
 });
 
-server.listen(4040, '127.0.0.1', () => {
-    console.log('TCP server listening on 127.0.0.1:4040');
+server.listen(4040, 'https://mapbattle-tcp-socket.onrender.com/', () => {
+    console.log('TCP server listening on https://mapbattle-tcp-socket.onrender.com/');
 });
 
